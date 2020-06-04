@@ -44,9 +44,6 @@ public final class CamelRoutes extends RouteBuilder {
                 .apiProperty("api.version", "1.0")
         ;
 
-        from("timer:hello?period=5000").log("logs");
-
-
         rest()
                 .post("/customer-product-service-eligibility/activation")
                 .id("activateSDCustomerProductServiceEligibility")
@@ -453,7 +450,10 @@ public final class CamelRoutes extends RouteBuilder {
                 .description("Filter to refine the result set. ex- NextBest Instance Status = 'pending'")
                 .endParam()
                 .to("direct:RetrieveCustomerProductServiceEligibilityBehaviorQualifierReferenceIds");
+        from("direct:evaluateCustomerEligibilityAssessment")
+                .bean(TransformerBean.class,"evaluateEligibility")
 
+        ;
 
     }
 }

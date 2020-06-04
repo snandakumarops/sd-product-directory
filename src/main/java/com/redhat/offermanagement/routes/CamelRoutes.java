@@ -34,7 +34,7 @@ public final class CamelRoutes extends RouteBuilder {
                 .component("servlet")
 
                 .bindingMode(RestBindingMode.auto)
-                .producerComponent("http4").host("localhost:8085/service")
+                .producerComponent("http4").host("localhost:8080/service")
                 .apiContextPath("/swagger") //swagger endpoint path
                 .apiContextRouteId("swagger") //id of route providing the swagger endpoint
 

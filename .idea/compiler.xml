@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="customer-product-service-eligibility" />
+        <module name="product-directory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="customer-product-service-eligibility" target="1.8" />
+      <module name="product-directory" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

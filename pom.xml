@@ -7,11 +7,8 @@
 
 
   <groupId>com.redhat</groupId>
-  <artifactId>customer-product-service-eligibility</artifactId>
-  <version>1.0.0.0</version>
-
-  <name>elastic service</name>
-  <description>elastic service</description>
+  <artifactId>product-directory</artifactId>
+  <version>1.0.0</version>
 
 
     <properties>
@@ -176,13 +173,28 @@
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration>
+          <fork>true</fork>
+          <meminitial>128m</meminitial>
+          <maxmem>1024m</maxmem>
+          <compilerArgs>
+            <arg>-XX:MaxPermSize=512m</arg>
+          </compilerArgs>
+        </configuration>
+      </plugin>
+
+
+      <plugin>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-restdsl-swagger-plugin</artifactId>
         <version>2.21.0</version>
         <configuration>
-          <specificationUri>${project.basedir}/src/spec/customer-eligibility.json</specificationUri>
+          <specificationUri>${project.basedir}/src/spec/product-directory.json</specificationUri>
           <className>CamelRoutes</className>
-          <packageName>com.redhat.offermanagement.routes</packageName>
+          <packageName>com.redhat.productdirectory</packageName>
           <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
         </configuration>
       </plugin>

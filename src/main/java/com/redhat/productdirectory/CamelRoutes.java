@@ -79,7 +79,7 @@ public final class CamelRoutes extends RouteBuilder {
                     .name("body")
                     .type(RestParamType.body)
                     .required(true)
-                    .description("SDProductDirectory Configure Request Payload")
+                    .description("Configure Request Payload")
                 .endParam()
                 .to("direct:configureSDProductDirectory")
             .put("/product-directory/{sd-reference-id}/feedback")

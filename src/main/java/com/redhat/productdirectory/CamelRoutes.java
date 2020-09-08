@@ -26,7 +26,7 @@ public final class CamelRoutes extends RouteBuilder {
 
     @Value("${oc.project.path}")
     String projectPath;
-
+gggg
     @Bean
     public ServletRegistrationBean servletRegistrationBean() {
         ServletRegistrationBean registration = new ServletRegistrationBean(new CamelHttpTransportServlet(), "/service/*");

@@ -198,7 +198,7 @@
         <repository>
           <id>maven-releases</id>
           <name>maven-releases</name>
-          <url>${env.NEXUSREPO}</url>
+          <url>${NEXUSREPO}</url>
         </repository>
 
 
@@ -208,7 +208,7 @@
         <repository>
           <id>maven-releases</id>
           <name>maven-releases</name>
-          <url>${env.NEXUSREPO}</url>
+          <url>${NEXUSREPO}</url>
           <layout>default</layout>
         </repository>
 

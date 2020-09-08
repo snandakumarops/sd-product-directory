@@ -33,6 +33,7 @@ public final class CamelRoutes extends RouteBuilder {
         registration.setName("CamelServlet");
         return registration;
     }
+    //Method Configure
     public void configure() throws UnknownHostException {
 
 

@@ -37,7 +37,7 @@ public final class CamelRoutes extends RouteBuilder {
     public void configure() throws UnknownHostException {
 
 
-
+        //This is a new comment for the method
         restConfiguration()
                 .component("servlet")
 
